@@ -74,6 +74,10 @@ void* kcopy_memory(void* dest, const void* source, u64 size) {
     return platform_copy_memory(dest, source, size);
 }
 
+void* kset_memory(void* dest, i32 value, u64 size) {
+    return platform_set_memory(dest, value, size);
+}
+
 char* get_memory_usage_str() {
     const u64 gib = 1024 * 1024 * 1024;
     const u64 mib = 1024 * 1024;
@@ -81,7 +85,6 @@ char* get_memory_usage_str() {
 
     char buffer[8000] = "System memory use (tagged):\n";
     u64 offset = strlen(buffer);
-
     for (u32 i = 0; i < MEMORY_TAG_MAX_TAGS; ++i) {
         char unit[4] = "XiB";
         float amount = 1.0f;
