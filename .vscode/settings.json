@@ -56,9 +56,10 @@
         "vulkan_platform.h": "c",
         "renderer_frontend.h": "c",
         "defines.h": "c",
-
         "iosfwd": "c",
         "tuple": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "kmemory.h": "c",
+        "xutility": "c"
     }
 } 
